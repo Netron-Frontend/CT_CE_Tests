@@ -95,3 +95,23 @@ npm run dev
 npm run build
 npm start
 ```
+
+## Деплой на Render
+
+### Настройки в Render Dashboard:
+
+1. **Build Command**: `npm install && npm run build`
+2. **Start Command**: `npm start`
+3. **Publish Directory**: оставьте **ПУСТЫМ** (не указывайте ничего)
+4. **Node Version**: 22.x (или последняя LTS версия)
+5. **Environment**: Node
+
+### Важно:
+
+- Не указывайте Publish Directory - Next.js использует стандартную директорию `.next`
+- Render автоматически устанавливает переменную `PORT` - Next.js использует её автоматически
+- Убедитесь, что в настройках указан правильный Build Command и Start Command
+
+### После деплоя:
+
+Сайт будет доступен по адресу: `https://your-service-name.onrender.com`
